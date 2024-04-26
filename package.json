@@ -1,0 +1,35 @@
+{
+  "name": "usdc-deployment",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Distributed Lab",
+  "description": "",
+  "scripts": {
+    "build": "npm run forge-install && npm run compile && npm run generate-types",
+    "forge-install": "make forge-install",
+    "compile": "npm install --ignore-scripts --prefix ./lib/stablecoin-evm && npm run --prefix ./lib/stablecoin-evm compile",
+    "generate-types": "typechain --target=ethers-v5 --out-dir './generated-types' './lib/stablecoin-evm/build/contracts/**/*.json'",
+    "deploy-qtum-testnet": "npx hardhat migrate --network qtumTestnet",
+    "lint-fix": "npm run lint-ts-fix && npm run lint-json-fix",
+    "lint-json-fix": "prettier --write \"./**/*.json\"",
+    "lint-ts-fix": "prettier --write \"**/*.ts\""
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-foundry": "^1.1.1",
+    "@solarity/hardhat-migrate": "^2.0.1",
+    "@typechain/ethers-v5": "^11.1.2",
+    "dotenv": "^16.4.0",
+    "ethers": "5.7.2",
+    "hardhat": "^2.19.4",
+    "husky": "^8.0.3",
+    "prettier": "^3.2.4",
+    "prettier-plugin-solidity": "^1.3.1",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typechain": "^8.3.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "qtum-ethers-wrapper": "^2.1.2"
+  }
+}

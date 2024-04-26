@@ -1,0 +1,3 @@
+[submodule "lib/stablecoin-evm"]
+	path = lib/stablecoin-evm
+	url = https://github.com/circlefin/stablecoin-evm

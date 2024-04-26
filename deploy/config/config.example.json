@@ -1,0 +1,12 @@
+{
+  "proxyAdminAddress": "",
+  "ownerAddress": "",
+  "pauserAddress": "",
+  "blacklisterAddress": "",
+  "lostAndFoundAddress": "",
+  "masterMinterOwnerAddress": "",
+  "tokenName": "Bridged USDC (Third-Party Team)",
+  "tokenSymbol": "USDC.e",
+  "tokenCurrency": "USD",
+  "tokenDecimals": 6
+}

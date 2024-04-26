@@ -1,0 +1,10 @@
+[profile.default]
+src = "lib/stablecoin-evm/contracts"
+libs = ["lib"]
+
+remappings = [
+    "@openzeppelin/=lib/openzeppelin-contracts",
+    "@usdc/=lib/stablecoin-evm",
+    "@forge-std/=lib/forge-std/src",
+    "@/=./"
+]

@@ -1,0 +1,28 @@
+node_modules
+lib
+report
+.env
+.DS_Store
+deploy/config/config.json
+
+# Compiler files
+cache
+out
+artifacts
+cache_hardhat
+
+# Ignores development broadcast logs
+/broadcast
+
+docs
+coverage
+coverage.json
+
+lcov.info
+
+# Typechain generated files
+generated-types
+.migrate.storage.json
+
+# Dotenv file
+.env
