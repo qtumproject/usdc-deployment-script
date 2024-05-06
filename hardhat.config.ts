@@ -11,6 +11,9 @@ dotenv.config();
 
 const config: HardhatUserConfig = {
   networks: {
+    qtumMainnet: {
+      url: `https://mainnet.qnode.qtum.info/v1/${process.env.QTUM_API_KEY}`,
+    },
     qtumTestnet: {
       url: `https://testnet.qnode.qtum.info/v1/${process.env.QTUM_API_KEY}`,
     },

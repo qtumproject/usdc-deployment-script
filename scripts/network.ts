@@ -30,6 +30,12 @@ export async function deployQTumContract(
   contractName: string,
   args: any[] = [],
 ) {
+  if (UserStorage.has(contractName)) {
+    console.log(`Contract ${contractName} already exists in UserStorage`);
+
+    return getQTumContractAt(contractFactory, contractName);
+  }
+
   const wallet = getQTUMSigner();
 
   const QTUMContractFactory = new QtumContractFactory(contractFactory.abi, contractFactory.bytecode, wallet);
@@ -37,10 +43,6 @@ export async function deployQTumContract(
   const instance = await QTUMContractFactory.deploy(...args);
 
   await reportTransactionReceipt(await instance.deployTransaction.wait(), contractName);
-
-  if (UserStorage.has(contractName)) {
-    throw new Error(`Contract ${contractName} already exists in UserStorage`);
-  }
 
   UserStorage.set(contractName, instance.address);
 

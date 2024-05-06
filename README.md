@@ -33,5 +33,5 @@ npx hardhat migrate --network qtumTestnet --from 3 --continue
 
 ## Implementation Notes
 
-1. Typings are generated based on the artifacts that are created after the Truffle compilation process.
+1. Typings are generated based on the artifacts that are created after the Truffle compilation process of the `stablecoin-evm` contracts.
 2. [qtum-ethers-wrapper](https://github.com/qtumproject/qtum-ethers) is used for contract deployment and interaction, so almost all features of the [@solarity/hardhat-migrate](https://github.com/dl-solarity/hardhat-migrate) are not supported.
